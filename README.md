@@ -1,1 +1,0 @@
-# mazelna ma3malnech
