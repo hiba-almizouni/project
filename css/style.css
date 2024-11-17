@@ -226,6 +226,7 @@ body{
     
  }
  .landing .btn-primary {
+    width: fit-content;
     position: absolute;
     bottom: 20px;
     left: 50%;
@@ -417,15 +418,21 @@ background-color: white;
 .footer {
     background-color: var(--secondary-color);
     color: #fff;
-    padding: var(--section-padding);
+    padding: 15px;
 }
 
 .footer-content {
-    display: grid;
+    
+    justify-content: space-between;
+    flex-wrap: wrap;
+    display: flex
+;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 20px;
     margin-bottom: 20px;
 }
+
+
 
 .footer-content h3 {
     margin-bottom: 10px;
@@ -444,16 +451,22 @@ background-color: white;
     list-style: none;
     padding: 0;
     margin: 0;
+    display: flex;
+    justify-content: space-around;
+    
 }
 
 .footer-links ul li {
     margin-bottom: 10px;
+    width: fit-content;
+    display: contents;
 }
 
 .footer-links ul li a {
     color: #ddd;
     text-decoration: none;
     transition: color 0.3s;
+    font-size: 15px;
 }
 
 .footer-links ul li a:hover {
