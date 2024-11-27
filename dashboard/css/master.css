@@ -937,6 +937,31 @@ ul {
   height: 100%;
   border-radius: 6px;
 }
+.popup{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  flex-wrap: wrap;
+  justify-content: space-around;
+  border-radius: 6px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  scale: 0.1;
+  visibility: hidden;
+  transition: 0.3s;
+  z-index: 1;
+  
+}
+.popup .enrol , .close{
+  height: fit-content;
+}
+.open-popup{
+  scale: 1;
+  visibility: visible;
+
+}
 /* End Projects Page */
 /* Start Courses Page */
 .courses-page {
