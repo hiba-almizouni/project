@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projects</title>
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/framework.css" />
+    <link rel="stylesheet" href="css/master.css" />
+    <link rel="stylesheet" href="newy.css" />
+  </head>
+  <body>
+    <div class="page d-flex">
+      <div class="sidebar bg-white p-20 p-relative">
+        <h3 class="p-relative txt-c mt-0">habit-up</h3>
+        <ul>
+          <li>
+            <a class="active d-flex align-center fs-14 c-black rad-6 p-10" href="index.html">
+              <i class="fa-duotone fa-solid fa-user"></i><FontAwesomeIcon icon="fa-solid fa-user" />             
+               <span>Profile</span>
+            </a>
+          </li>
+          <li>
+            <a class="d-flex align-center fs-14 c-black rad-6 p-10" href="settings.html">
+              <i class="fa-solid fa-gear fa-fw"></i><FontAwesomeIcon icon="fa-solid fa-gear" />
+              <span>Settings</span>
+            </a>
+          </li>
+          
+          <li>
+            <a class="d-flex align-center fs-14 c-black rad-6 p-10" href="projects.html">
+              <i class="fa-solid fa-users"></i><FontAwesomeIcon icon="fa-solid fa-users" />
+              <span>Challanges</span>
+            </a>
+          </li>
+         
+          <li>
+            <a class="d-flex align-center fs-14 c-black rad-6 p-10" href="yourhabits.html">
+              <i class="fa-solid fa-wand-magic-sparkles"></i><FontAwesomeIcon icon="fa-solid fa-wand-magic-sparkles" />
+              <span>Your-habits</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="content w-full">
+        <!-- Start Head -->
+        <div class="habit-sections">
+          <!-- Current Habits Section -->
+          <div id="currentHabits" class="habit-box">
+            <h2>Current Habits</h2>
+            <div id="habitsContainer">
+              <!-- Habits will be dynamically added here -->
+            </div>
+          </div>
+
+          <!-- Completed Habits Section -->
+          <div id="completedHabits" class="habit-box">
+            <h2>Completed Habits</h2>
+            <div id="completedHabitsContainer">
+              <!-- Completed habits will be dynamically added here -->
+            </div>
+          </div>
+        </div>
+
+        <button id="openPopup" class="add-habit-btn">Add New Habit</button>
+
+        <!-- Popup -->
+        <div id="popup" class="popup">
+          <div class="popup-content">
+            <span class="close" id="closePopup">&times;</span>
+            <h2>Add New Habit</h2>
+            <form id="habitForm">
+              <div class="labels">
+                <input
+                  type="text"
+                  id="habitName"
+                  placeholder="Enter habit name"
+                  required
+                  class="input-form"
+                />
+                <label for="habitName" class="form-label">Habit Name:</label>
+              </div>
+
+              <div class="labels">
+                <label style="color: #789DBC;" for="goal">Goal:</label>
+              <div class="goal-inputs">
+                <input class="input-form" type="number" id="goal" min="1" value="1" required />
+                <select id="goalType" style="color: #aaa" >
+                  <option value="times">Times</option>
+                  <option value="minutes">Minutes</option>
+                  <option value="minutes">Hours</option>
+                </select>
+                <select id="goalFrequency" style="color: #aaa">
+                  <option value="day">Per Day</option>
+                  <option value="week">Per Week</option>
+                </select>
+              </div>
+              </div>
+              <div class="labels">
+                <input
+                class="input-form"
+                  type="text"
+                  id="reminder"
+                  placeholder="e.g., Drink water at 10 AM"
+                />
+                <label for="reminder" class="form-label">Reminder:</label>
+              </div>
+
+              <div class="popup-buttons">
+                <button type="button" id="cancelButton" class="btn">
+                  Cancel
+                </button>
+                <button type="submit" id="saveButton" class="btn btn-primary">
+                  Save
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="newyy.js"></script>
+  </body>
+</html>
