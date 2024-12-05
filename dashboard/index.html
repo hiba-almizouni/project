@@ -16,6 +16,7 @@
 </head>
 <body>
     <div class="page d-flex">
+
         <div class="sidebar bg-white p-20 p-relative">
           <h3 class="p-relative txt-c mt-0">habit-up</h3>
           <ul>
@@ -47,22 +48,12 @@
             </li>
           </ul>
         </div>
-        <div class="content w-full">
-         
-          <div class="head bg-white p-15 between-flex">
-            <div class="search p-relative">
-              <input class="p-10" type="search" placeholder="Type A Keyword" />
-            </div>
-            <div class="icons d-flex align-center">
-              <span class="notification p-relative">
-                <i class="fa-regular fa-bell fa-lg"></i>
-              </span>
-              <img src="imgs/avatar.png" alt="" />
-            </div>
+        <div class="content w-full p-relative">
+          <div class="head bg-white p-15 d-flex" style="justify-content: right;">
+            <button class=" btn btn-ghost delete-all-btn" data-modal-target="#modal">Calendar</button>
           </div>
-          
           <h1 class="p-relative">Profile</h1>
-          <div class="wrapper d-grid gap-20">
+          <div class="wrapper d-grid gap-20 p-relative">
             
             <div class="welcome bg-white rad-10 txt-c-mobile block-mobile">
               <div class="intro p-20 d-flex space-between bg-eee">
@@ -79,7 +70,7 @@
                 <div>Tunisia <span class="d-block c-grey fs-14 mt-10">country</span></div>
               </div>
             </div>  
-              <div class="tasks p-20 bg-white rad-10">
+            <div class="tasks p-20 bg-white rad-10">
                 <h2 class="mt-0 mb-20">Today Tasks</h2>
                 <div class="task-row between-flex">
                   <div class="info">
@@ -116,8 +107,8 @@
                   </div>
                   <i class="fa-regular fa-trash-can delete"></i>
                 </div>
-              </div>
-              <div class="quick-draft p-20 bg-white rad-10">
+            </div>
+            <div class="quick-draft p-20 bg-white rad-10">
                 <h2 class="mt-0 mb-10">Quick Note</h2>
                 <p class="mt-0 mb-20 c-grey fs-15">Write A Quick Note,Ideas,Events...</p>
                 <form>
@@ -125,161 +116,148 @@
                   <textarea class="d-block mb-20 w-full p-10 b-none bg-eee rad-6" placeholder="Your Thought"></textarea>
                   <input class="save d-block fs-14 bg-blue c-white b-none w-fit btn-shape" type="submit" value="Save" />
                 </form>
-              </div>
-              
-          
-            
-            <button class="buttonwidhth1" data-modal-target="#modal">Calendar</button>
-            <div class="modal" id="modal">
-              <div class="modal-header">
-                <div class="title">Calendar</div>
-                <button data-close-button class="close-button">&times;</button>
-              </div>
-              <div class="modal-body">
-                  <div class="quick-draft p-20 bg-white rad-10">
-                      <h2 class="mt-0 mb-10">Calendar</h2>
-                      <p class="mt-0 mb-20 c-grey fs-15">Write A Quick Note,Ideas,Events...</p>
-                      <div class="container">
-                        <div class="left">
-                          <div class="calendar">
-                            <div class="month">
-                              <i class="fas fa-angle-left prev"></i>
-                              <div class="date">december 2015</div>
-                              <i class="fas fa-angle-right next"></i>
-                            </div>
-                            <div class="weekdays">
-                              <div>Sun</div>
-                              <div>Mon</div>
-                              <div>Tue</div>
-                              <div>Wed</div>
-                              <div>Thu</div>
-                              <div>Fri</div>
-                              <div>Sat</div>
-                            </div>
-                            <div class="days"></div>
-                            <div class="goto-today">
-                              <div class="goto">
-                                <input type="text" placeholder="mm/yyyy" class="date-input" />
-                                <button class="goto-btn">Go</button>
-                              </div>
-                              <button class="today-btn">Today</button>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="right">
-                          <div class="today-date">
-                            <div class="event-day">wed</div>
-                            <div class="event-date">12th december 2022</div>
-                          </div>
-                          <div class="events"></div>
-                          <div class="add-event-wrapper">
-                            <div class="add-event-header">
-                              <div class="title">Add Event</div>
-                              <i class="fas fa-times close"></i>
-                            </div>
-                            <div class="add-event-body">
-                              <div class="add-event-input">
-                                <input type="text" placeholder="Event Name" class="event-name" />
-                              </div>
-                              <div class="add-event-input">
-                                <input
-                                  type="text"
-                                  placeholder="Event Time From"
-                                  class="event-time-from"
-                                />
-                              </div>
-                              <div class="add-event-input">
-                                <input
-                                  type="text"
-                                  placeholder="Event Time To"
-                                  class="event-time-to"
-                                />
-                              </div>
-                            </div>
-                            <div class="add-event-footer">
-                              <button class="add-event-btn">Add Event</button>
-                            </div>
-                          </div>
-                        </div>
-                        <button class="add-event">
-                          <i class="fas fa-plus"></i>
-                        </button>
-                      </div>
-                  
-                      <div class="credits">
-                        
-                      </div>
-                    </div>
-                  
-                    
-                    </div>
-              </div>
             </div>
-            <div id="overlay"></div>
-
-
-
-
-            <body>
-
-              <!-- main todo container -->
-              <div class="containert">
-                  <!-- header that has input and add button -->
-                  <header>
-                      <h1>Monthly Targets List</h1>
-          
-                      <div class="input-section">
-                          <input id="todo-input" type="text" placeholder="📑 Add your new monthly target here.."
-                              class="input w-full max-w-xs" />
-                          <button id="add-button" class="btn btn-add ">
-                              ADD
-                          </button>
-                      </div>
-                  </header>
-          
-                  <!-- delete buttons -->
-          
-                  <div class="todos-filter">
-          
-                      <button id="delete-selected" class="btn btn-ghost delete-selected-btn">
-                          Delete Selected
-                      </button>
-                      <button id="delete-all" class="btn btn-ghost delete-all-btn">
-                          Delete All
+             <!-- main todo container -->
+            <div class="containert  p-20 bg-white rad-10">
+              <!-- header that has input and add button -->
+              <header>
+                  <h1>Monthly Targets List</h1>
+      
+                  <div class="input-section">
+                      <input id="todo-input" type="text" placeholder="📑 Add your new monthly target here.."
+                          class="input w-full max-w-xs" />
+                      <button id="add-button" class="btn btn-add " >
+                          ADD
                       </button>
                   </div>
-          
-          
-                  <!-- this is the dynamic content which dds ups all the todos -->
-                  <ul id="all-todos" class="todos-list">
-          
-                  </ul>
-          
-          
-                  <!-- dropdown throgh which we can apply filters -->
-                  <div class="filters">
-                      <div class="dropdown">
-                          <button class="dropbtn">Filter</button>
-                          <div class="dropdown-content">
-                              <a href="#" id="all">All</a>
-                              <a href="#" id="rem">Pending</a>
-                              <a href="#" id="com">Completed</a>
-                          </div>
+              </header>
+      
+              <!-- delete buttons -->
+      
+              <div class="todos-filter">
+      
+                  <button id="delete-selected" class="btn btn-ghost delete-selected-btn">
+                      Delete Selected
+                  </button>
+                  <button id="delete-all" class="btn btn-ghost delete-all-btn">
+                      Delete All
+                  </button>
+              </div>
+      
+      
+              <!-- this is the dynamic content which dds ups all the todos -->
+              <ul id="all-todos" class="todos-list">
+      
+              </ul>
+      
+      
+              <!-- dropdown throgh which we can apply filters -->
+              <div class="filters">
+                  <div class="dropdown">
+                      <button class="dropbtn">Filter</button>
+                      <div class="dropdown-content">
+                          <a href="#" id="all">All</a>
+                          <a href="#" id="rem">Pending</a>
+                          <a href="#" id="com">Completed</a>
                       </div>
-          
-                      <!-- value showing completed task and all -->
-                      <div class="completed-task">
-                          <p>Completed: <span id="c-count">0</span></p>
-                      </div>
-                      <div class="remaining-task">
-                          <p>Total Targets: <span id="r-count">0</span></p>
-                      </div>
+                  </div>
+      
+                  <!-- value showing completed task and all -->
+                  <div class="completed-task">
+                      <p>Completed: <span id="c-count">0</span></p>
+                  </div>
+                  <div class="remaining-task">
+                      <p>Total Targets: <span id="r-count">0</span></p>
                   </div>
               </div>
+              </div>
+
+              <div class="modal  " id="modal" style="position: absolute;height:100%; width: 100%;">
+                <div class="modal-header">
+                  <div class="title">Calendar</div>
+                  <button data-close-button class="close-button">&times;</button>
+                </div>
+                <div class="modal-body d-flex " >
+                 
+                        <div class="container ">
+                          <div class="left">
+                            <div class="calendar">
+                              <div class="month">
+                                <i class="fas fa-angle-left prev"></i>
+                                <div class="date">december 2015</div>
+                                <i class="fas fa-angle-right next"></i>
+                              </div>
+                              <div class="weekdays">
+                                <div>Sun</div>
+                                <div>Mon</div>
+                                <div>Tue</div>
+                                <div>Wed</div>
+                                <div>Thu</div>
+                                <div>Fri</div>
+                                <div>Sat</div>
+                              </div>
+                              <div class="days"></div>
+                              <div class="goto-today">
+                                <div class="goto">
+                                  <input type="text" placeholder="mm/yyyy" class="date-input" />
+                                  <button class="goto-btn">Go</button>
+                                </div>
+                                <button class="today-btn">Today</button>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="right">
+                            <div class="today-date">
+                              <div class="event-day">wed</div>
+                              <div class="event-date">12th december 2022</div>
+                            </div>
+                            <div class="events"></div>
+                            <div class="add-event-wrapper">
+                              <div class="add-event-header">
+                                <div class="title">Add Event</div>
+                                <i class="fas fa-times close"></i>
+                              </div>
+                              <div class="add-event-body">
+                                <div class="add-event-input">
+                                  <input type="text" placeholder="Event Name" class="event-name" />
+                                </div>
+                                <div class="add-event-input">
+                                  <input
+                                    type="text"
+                                    placeholder="Event Time From"
+                                    class="event-time-from"
+                                  />
+                                </div>
+                                <div class="add-event-input">
+                                  <input
+                                    type="text"
+                                    placeholder="Event Time To"
+                                    class="event-time-to"
+                                  />
+                                </div>
+                              </div>
+                              <div class="add-event-footer">
+                                <button class="add-event-btn">Add Event</button>
+                              </div>
+                            </div>
+                          </div>
+                          <button class="add-event">
+                            <i class="fas fa-plus"></i>
+                          </button>
+                        </div>
+                    
+                        <div class="credits">
+                        </div>
+                
+                      </div>
+              </div>
+                <div id="overlay"></div>
             
+            </div>
+        
           </div>
 
-</div>
+     </div>
 
 </div>
 </body>
